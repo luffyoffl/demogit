@@ -4,6 +4,9 @@ from mysql.connector import connect
 from mysql.connector import errorcode
 
 from utill import *
+import mysql.connector
+import pymysql
+
 con=mysql.connector.connect(
     host="localhost",
     user="root",
@@ -15,7 +18,7 @@ con=mysql.connector.connect(
 try:
     with con.cursor() as cursor:
         create_table="""
-        CREATE TABLE  bob1 (
+        CREATE TABLE  git(
         id INT AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(100),
         department VARCHAR(100)
@@ -23,13 +26,13 @@ try:
         """
         cursor.execute(create_table)
 
-        insert_data="INSERT INTO bob1 (name,department) VALUES (%s,%s)"
+        insert_data="INSERT INTO git (name,department) VALUES (%s,%s)"
         values=[("luffy","captain"),("zoro","swordsmen"),("kaido","emporer")]
         cursor.executemany(insert_data,values)
         con.commit()
 
 
-        xx="SELECT  * FROM bob1"
+        xx="SELECT  * FROM git"
         cursor.execute(xx)
         result= cursor.fetchall()
 
