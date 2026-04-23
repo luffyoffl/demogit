@@ -1,7 +1,7 @@
 from idlelib.macosx import hideTkConsole
 
 from cryptography.fernet import Fernet
-from utill import encrypt_password
+from utill import encrypt_pa
 def generate_key():
     key=Fernet.generate_key()
     with open("key.txt","rb+") as f:
