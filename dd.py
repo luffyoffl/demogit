@@ -32,3 +32,4 @@ finally:
             cursor.close()
             conn.close()
             print("closed connection to db")
+print("changed")
