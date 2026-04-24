@@ -22,7 +22,7 @@ try:
         conn.commit()
         cursor.execute(query)
         result=cursor.fetchall()
-        with open("x.txt","w+") as f:
+        with open("x.txt","w") as f:
             for i in result:
                 f.write(f"{i}\n")
 except error as e:

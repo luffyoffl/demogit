@@ -16,7 +16,7 @@ def decrypt_password(encrypted_password):
     hide=f.decrypt(encrypted_password).decode()
     return maskpsw(hide)
 def get_password():
-    encrypted_password=b'gAAAAABp6NoCUfOM3nELgKlnOgjFj2ABh-eaRC0RVR1OcBwy4nK_3QYzSzgv415EOSN1r6ZskN5G7xYTjlJAGwpZBbqQ9-v5hg=='
+    encrypted_password=b'gAAAAABp65OEcrLz7AjPjKz7hck76-B-mn_W_Uf2UIsx3KgaPKzjuNu-0rFUg_b3NFqEhh7qd6DvqlJGJafapA8P3DzuMl09ow=='
     return decrypt_password(encrypted_password)
 
 

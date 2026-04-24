@@ -4,7 +4,7 @@ from cryptography.fernet import Fernet
 from utill import encrypt_password
 def generate_key():
     key=Fernet.generate_key()
-    with open("key.txt","rb+") as f:
+    with open("key.txt","wb+") as f:
         f.write(key)
 if __name__ == "__main__":
 
